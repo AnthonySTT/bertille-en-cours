@@ -126,14 +126,14 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
 
 .nav-list { display: flex; align-items: center; gap: 2rem; }
 .nav-list a:not(.btn) {
-  text-decoration: none; font-size: .95rem; color: var(--text);
+  white-space: nowrap; text-decoration: none; font-size: .95rem; color: var(--text);
   background: linear-gradient(currentColor, currentColor) 0 100% / 0 1px no-repeat;
   padding-bottom: 2px; transition: background-size .4s var(--ease);
 }
 .nav-list a:not(.btn):hover { background-size: 100% 1px; }
 .nav-toggle { display: none; }
 
-@media (max-width: 900px) {
+@media (max-width: 1100px) {
   /* Sur téléphone et tablette : l'en-tête garde toujours un fond (Safari iOS) */
   .site-header {
     background: rgba(232, 223, 207, .96);
@@ -210,7 +210,7 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
   .hero-portrait { max-width: 30rem; }
 }
 
-/* Séquence d'ouverture (unique moment orchestré) */
+/* Séquence d'ouverture */
 .js .hero-title .line > span { transform: translateY(105%); }
 .js .hero-kicker, .js .hero-lede, .js .hero-actions { opacity: 0; transform: translateY(10px); }
 .js .portrait-frame { clip-path: inset(100% 0 0 0); }
@@ -405,6 +405,8 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
 .field [aria-invalid="true"] { border-color: #a3322a; }
 .field-check { display: grid; grid-template-columns: auto 1fr; gap: .75rem; align-items: start; font-size: .88rem; color: var(--muted); }
 .field-check input { width: 1.15rem; height: 1.15rem; margin-top: .2rem; accent-color: var(--anthracite); }
+.hp { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
+.form-status.is-ok { color: var(--text); font-weight: 500; }
 .form-status { font-size: .92rem; min-height: 1.4em; }
 .form-status.is-error { color: #a3322a; }
 
@@ -489,14 +491,14 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
 }
 
 
-/* Variante chaude : rythme des fonds, les domaines sur un sable plus soutenu */
+/* Rythme des fonds : les domaines sur un sable plus soutenu */
 .domains { background: var(--pierre); }
 .domains .domain-list, .domains .domain { border-color: rgba(36,37,35,.16); }
 .method { background: var(--calcaire); }
 .method .step-num { background: var(--calcaire); }
 .method .role { background: var(--rabat); }
 
-/* En-tête blanc, détaché du fond ivoire */
+/* En-tête blanc */
 .site-header, .site-header.is-scrolled {
   background: rgba(251, 250, 247, .97);
   -webkit-backdrop-filter: saturate(140%) blur(14px);
