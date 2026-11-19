@@ -29,15 +29,15 @@
 
 :root {
   /* Couleurs */
-  --calcaire: #eee7db;     /* fond principal, blanc cassé minéral */
-  --rabat: #f8f3ea;        /* blanc des cartes et champs */
-  --pierre: #e3d8c6;       /* beige chaud, séparations et surfaces */
+  --calcaire: #e8dfcf;     /* fond principal, blanc cassé minéral */
+  --rabat: #f6f0e5;        /* blanc des cartes et champs */
+  --pierre: #dccfb8;       /* beige chaud, séparations et surfaces */
   --mineral: #80796e;      /* gris minéral, textes secondaires */
   --anthracite: #242523;   /* texte et sections sombres */
   --robe: #1a1b1a;         /* noir de la robe, ombres profondes */
 
   --text: var(--anthracite);
-  --muted: #5e5850;        /* gris lisible AA sur calcaire */
+  --muted: #5a5348;        /* gris lisible AA sur calcaire */
   --line: rgba(36, 37, 35, .14);
 
   /* Typographie */
@@ -111,7 +111,7 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
   transition: background-color .4s var(--ease), box-shadow .4s var(--ease);
 }
 .site-header.is-scrolled {
-  background: rgba(238, 231, 219, .94);
+  background: rgba(232, 223, 207, .94);
   -webkit-backdrop-filter: saturate(140%) blur(14px);
   backdrop-filter: saturate(140%) blur(14px);
   box-shadow: 0 1px 0 var(--line);
@@ -136,7 +136,7 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
 @media (max-width: 900px) {
   /* Sur téléphone et tablette : l'en-tête garde toujours un fond (Safari iOS) */
   .site-header {
-    background: rgba(238, 231, 219, .96);
+    background: rgba(232, 223, 207, .96);
     -webkit-backdrop-filter: saturate(140%) blur(14px);
     backdrop-filter: saturate(140%) blur(14px);
     transform: translateZ(0);
@@ -488,3 +488,10 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
   .contact .form .field-message textarea { height: 100%; }
 }
 
+
+/* Variante chaude : rythme des fonds, les domaines sur un sable plus soutenu */
+.domains { background: var(--pierre); }
+.domains .domain-list, .domains .domain { border-color: rgba(36,37,35,.16); }
+.method { background: var(--calcaire); }
+.method .step-num { background: var(--calcaire); }
+.method .role { background: var(--rabat); }
