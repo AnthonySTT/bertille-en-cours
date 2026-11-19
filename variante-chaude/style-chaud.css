@@ -495,3 +495,12 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
 .method { background: var(--calcaire); }
 .method .step-num { background: var(--calcaire); }
 .method .role { background: var(--rabat); }
+
+/* En-tête blanc, détaché du fond ivoire */
+.site-header, .site-header.is-scrolled {
+  background: rgba(251, 250, 247, .97);
+  -webkit-backdrop-filter: saturate(140%) blur(14px);
+  backdrop-filter: saturate(140%) blur(14px);
+  box-shadow: 0 1px 0 rgba(36, 37, 35, .10);
+}
+@media (max-width: 900px) { .nav-list { background: #fbfaf7; } }
